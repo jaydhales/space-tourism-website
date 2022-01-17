@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0b0d17;
+  color: #fff;
+  font-family: "Bellefair", serif;
+}
+
+h1,
+.h1 {
+  font-size: 135px;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 1rem 0;
+}
+h2,
+.h2 {
+  font-size: 100px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+h3,
+.h3 {
+  font-size: 56px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+h4,
+.h4 {
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+h5,
+.h5 {
+  font-size: 28px;
+  word-spacing: 4.75px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #d0d6f9;
+}
+.Subheading-1 {
+  font-size: 28px;
+  text-transform: uppercase;
+}
+.Subheading-2 {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+p {
+  font-size: 18px;
+  color: #d0d6f9;
+  line-height: 1.5rem;
+}
+button {
+  background: #d0d6f9;
+  border: none;
+  margin: 1rem;
+  border-radius: 50%;
+}
+button:active {
+  background: #fff;
+}
+
+.num {
+  color: grey;
+  padding-right: 1rem;
+}
+
+
+.landing-page-main-btn {
+  width: 274px;
+  height: 274px;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  border-radius: 50%;
+  border: 0;
+  transition: box-shadow 0.5s ease;
+  margin: 88px;
+}
+.landing-page-main-btn:hover {
+  box-shadow: 0 0 0 88px #ffffff1c;
+}
+.landing-page-main-btn:active {
+  border: solid 15px #0b0d17;
+}
+.landing-page-main-btn .h5 {
+  color: #0b0d17;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0 2rem 2rem;
+}
+
+.det {
+  width: 50%;
+}
+
+section {
+  position: relative;
+}
+
+section h5 {
+  text-align: center;
+  padding: 0 2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.details,
+img {
+  width: 400px;
+  margin: 2rem;
+}
+
+.tech-nav {
+  position: relative;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem auto;
+}
+
+.tech-nav button {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+}
+
+.app {
+  background-image: url("../../public/assets/home/background-home-mobile.jpg");
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.destination {
+  background-image: url("../../public/assets/destination/background-destination-mobile.jpg");
+}
+.crew {
+  background-image: url("../../public/assets/crew/background-crew-mobile.jpg");
+}
+.tech {
+  background-image: url("../../public/assets/technology/background-technology-mobile.jpg");
+}
+
+@media screen and (min-width: 750px) {
+  main {
+    flex-direction: row;
+  }
+
+  section h5 {
+    text-align: left;
+  }
+
+  .app {
+    background-image: url("../../public/assets/home/background-home-tablet.jpg");
+  }
+  .destination {
+    background-image: url("../../public/assets/destination/background-destination-tablet.jpg");
+  }
+  .crew {
+    background-image: url("../../public/assets/crew/background-crew-tablet.jpg");
+  }
+  .tech {
+    background-image: url("../../public/assets/technology/background-technology-tablet.jpg");
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .tech-nav {
+    display: grid;
+    position: absolute;
+    width: max-content;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  section h5 {
+    width: 70vw;
+    margin: auto;
+  }
+
+  .app {
+    background-image: url("../../public/assets/home/background-home-desktop.jpg");
+  }
+  .destination {
+    background-image: url("../../public/assets/destination/background-destination-desktop.jpg");
+  }
+  .crew {
+    background-image: url("../../public/assets/crew/background-crew-desktop.jpg");
+  }
+  .tech {
+    background-image: url("../../public/assets/technology/background-technology-desktop.jpg");
+  }
+}
