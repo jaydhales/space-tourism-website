@@ -21,8 +21,8 @@ function Crew(props) {
                   id={da.name}
                   key={da.name}
                   style={{
-                    width: 12,
-                    height: 12,
+                    width: 20,
+                    height: 20,
                   }}
                 ></button>
               ))}

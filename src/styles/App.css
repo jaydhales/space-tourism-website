@@ -52,11 +52,13 @@ h5,
 .Subheading-2 {
   font-size: 14px;
   text-transform: uppercase;
+  margin: 0;
 }
 p {
   font-size: 18px;
   color: #d0d6f9;
   line-height: 1.5rem;
+  margin: 1rem auto;
 }
 button {
   background: #d0d6f9;
@@ -72,7 +74,6 @@ button:active {
   color: grey;
   padding-right: 1rem;
 }
-
 
 .landing-page-main-btn {
   width: 274px;
@@ -122,9 +123,14 @@ main {
   align-items: center;
 }
 
-.details,
-img {
+.details {
   width: 400px;
+  margin: 2rem;
+}
+
+img {
+  height: 400px;
+  width: auto;
   margin: 2rem;
 }
 

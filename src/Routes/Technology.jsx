@@ -9,7 +9,14 @@ function Technology(props) {
         <div className="tech-nav">
           {props.rawData.map((da) => (
             <button onClick={props.techChange} id={da.name} key={da.name}>
-              <h5 style={{ color: "#0b0d17", padding: 0 }}>
+              <h5
+                style={{
+                  color: "#0b0d17",
+                  padding: 0,
+                  margin: "auto",
+                  width: "max-content",
+                }}
+              >
                 {props.rawData.indexOf(da) + 1}
               </h5>
             </button>

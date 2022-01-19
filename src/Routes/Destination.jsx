@@ -21,7 +21,15 @@ function Destination(props) {
                   onClick={props.destinationChange}
                   id={da.name}
                   key={da.name}
-                  style={{ borderRadius: 0, padding: 5 }}
+                  style={{
+                    borderRadius: 0,
+                    padding: 5,
+                    background: "none",
+                    margin: "5px 10px",
+                    color: "#d0d6f9",
+                    textTransform: "uppercase",
+                    borderBottom: "solid 2px #d0d6f9",
+                  }}
                 >
                   {da.name}
                 </button>
@@ -35,6 +43,7 @@ function Destination(props) {
                 width: "100%",
                 height: 1,
                 background: "#d0d6f9",
+                margin: "1rem 0",
               }}
             />
 
