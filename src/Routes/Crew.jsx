@@ -16,7 +16,7 @@ function Crew(props) {
             <p>{crewInfo[0].bio}</p>
             <div className="crew-name">
               {props.rawData.map((da) => (
-                <button
+                <button className="btn-select"
                   onClick={props.crewChange}
                   id={da.name}
                   key={da.name}

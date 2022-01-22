@@ -1,10 +1,10 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState, useEffect } from "react";
-import Home from "./Routes/Home.jsx";
-import Destination from "./Routes/Destination.jsx";
-import Crew from "./Routes/Crew.jsx";
-import Technology from "./Routes/Technology.jsx";
-import "./styles/App.css";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import Home from './Routes/Home.jsx';
+import Destination from './Routes/Destination.jsx';
+import Crew from './Routes/Crew.jsx';
+import Technology from './Routes/Technology.jsx';
+import './styles/App.css';
 
 function App() {
   const [rawData, setRawData] = useState([]);
@@ -13,7 +13,7 @@ function App() {
   const [techData, setTechData] = useState([]);
 
   useEffect(() => {
-    fetch("data.json")
+    fetch('data.json')
       .then((res) => res.json())
       .then((data) => {
         setRawData(data);
@@ -25,6 +25,21 @@ function App() {
     setCrewData(rawData.crew);
     setTechData(rawData.technology);
   }, [rawData]);
+
+  useEffect(() => {
+    select();
+  });
+
+  function select() {
+    const btns = document.querySelectorAll('.btn-select');
+    btns.forEach((btn) => {
+      
+      btn.addEventListener('click', (e) => {
+        btns.forEach((x) => x.classList.remove('active'))
+        e.target.classList.add('active');
+      });
+    });
+  }
 
   function destinationChange(e) {
     e.preventDefault();
@@ -50,9 +65,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path='/' element={<Home />} />
         <Route
-          path="destination"
+          path='destination'
           element={
             <Destination
               rawData={rawData.destinations}
@@ -62,7 +77,7 @@ function App() {
           }
         />
         <Route
-          path="Crew"
+          path='Crew'
           element={
             <Crew
               rawData={rawData.crew}
@@ -72,7 +87,7 @@ function App() {
           }
         />
         <Route
-          path="Technology"
+          path='Technology'
           element={
             <Technology
               data={techData}
